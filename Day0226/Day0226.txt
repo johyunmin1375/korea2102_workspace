@@ -1,0 +1,64 @@
+오라클 가동하는법
+1.service 에서 OracleServiceXE를 실행
+2.오라클에 접속
+  win + R 로 커맨드 창을 띄우고 cmd 입력
+  c:/> sqlplus 입력
+  Enter user-name: sys (오라클 최고 관리자명)
+  Enter user-password : admin1234/ as sysdba (sysdba 권한으로...)
+  (Enter user-name: sys/amdin1234 as sysdba)
+
+* 참고) 접속시 비밀번호를 입력하지 않아도 가능
+          전제조건: 내가 현재 pc의 administrator 이어야 한다.
+          즉 오라클을 설치한 관리자
+
+3.system 사용자로 전환하여 로그인
+  sys계정은 막대한 권한을 가진 관리자 관한이므로, 특별한 경우가 아니면 대부분의 관리업무는   system 관리자 계정을 사용
+  SQL> 프롬프트는 이미 내가 오클에 접속, 
+  connect system/admin1234 <- 다른계정으로 접속
+
+접속확인 - show user;
+
+-------------------------------------------
+D:\oracle\app\oracle\oradata\XE - 오라클 경로
+
+시나리오 : 프로젝트가 시작되기 전에, 우리의 웹사이트에서 사용할 계정과 데이터베이스를 생성
+
+1. 데이터베이스 파일을 생성
+   오라클 확장명 : dbf
+
+ create tablespace frontspace
+ datafile 'D:\oracle\app\oracle\oradata\XE\frontspace.dbf'
+ size 1m;
+
+2. 사용자(user) 생성
+
+ create user front
+ identified by 1234
+ default tablespace frontspace
+ quota unlimited on frontspace;
+
+3. 사용자 접근
+   이미 오라클에 접속된 상태이므로 접속만 변경
+   - connect(conn) front/1234
+
+4. system권한으로 다시 전환하여 유저에게 필요한 권한을 부여
+   접속에 실패했으므로, 다시 systemdmfh 접속
+   - connect(conn) system/admin1234
+   - grant create session to front;
+
+5. 다시 사용자 접속
+   -connect(conn) front/1234
+
+6. 접속 후 데이터를 누적(표 형태)
+
+   - create table student( name varchar(20), money number, regdate date);
+
+7. 테이블 권한 추가 (system으로 접속 변경)
+   - conn system/admin1234
+   - grant create table to front;
+
+* 세미콜론은 언제 적용해야 하는가?
+  오라클 포함 데이터베이스가 이해할 수 있는 언어
+  SQL문은 반드시 세미콜론이 들어가야한다 (문법이기 때문)
+  but 우리가 사용중인 SQLPlus는 오라클 접속 프로그램이므로
+  이 프로그램 자체 명령어는 세미콜론이 필요없다

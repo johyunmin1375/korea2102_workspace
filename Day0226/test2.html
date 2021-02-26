@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: yellow;
+            width: 700px;
+            height: 100px;
+        }
+        #side{
+            background-color: greenyellow;
+            width: 100px;
+            height: 550px;
+            float: left;
+        }
+        #content{
+            background-color: blue;
+            width: 600px;
+            height: 550px;
+            float: left;
+        }
+        #s{
+            background-color: red;
+        }
+        #box{
+            background-color: hotpink;
+        }
+        #wrap {
+            /* 좌,우측의 남는 여백 공간을 2분하여, 동일하게 좌우 마진을 적용하는 방법 */
+            margin: 0 auto;
+            width: 700px;
+        }
+    </style>
+ </head>
+ <body>
+    <!-- 
+        모든 태그는 박스모델로 간주되며
+        속성은 크게 block, inline 속성을 갖는다
+        block : 나와 같은 수평공간에 어떤 누구도 허용하지 않는다.
+        inline : 다른 태그요소들과 수평공간에 공존할 수 있다.
+    -->
+    <!-- <span id="s">난 span</span>
+    <div id="box">난 div</div> -->
+    <div id="wrap">
+        <div id="header">header 영역</div>
+        <div id="side">side 영역</div>
+        <div id="content">content 영역</div>
+    </div>
+</body>
+ </html>

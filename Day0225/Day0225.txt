@@ -1,0 +1,10 @@
+테트리스게임 - JS
+https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B2%8C%EC%9E%84-%EA%B0%9C%EB%B0%9C#
+
+DB : 2시간
+DBMS(관리 시스템) vs DB (데이터 집합)
+DBMS : Oracle, MySQL(Linux + php)
+	사람이 데이터를 보기에 가장 편한 형태는? 표(table)
+--------------------------------------------------------------------
+program : 6
+HTML(Hyper Text Markup Language)

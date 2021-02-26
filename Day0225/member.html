@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* 이영역은 스타일 시트의 영역이다.. 즉 html태그영역이 아니다
+        따라서 스타일 시트문법만 작성이 가능
+        스타일 태그를 이용함녀, 문서내에서 스타일 시트를 적용할 대상을
+        일괄적으로 지정 및 적용 할 수 있다
+        스타일 시트의 문법 구조
+        누그를{어떻게~~}
+        누그를 지칭할때 사용하는 CSS의 요소를 가리켜 선택자(selector)
+         */
+        td{ 
+            font-size: 12px;
+            color: red;
+        }
+        select {
+            color : blue;
+        }
+        input{
+            background-color: yellow;
+            border: 2px dotted green;
+        }
+        /* 일괄적용 + 원하는 곳에만 적용시킬 수 있는 나만의 스타일 정의 */
+        .title_style{
+            text-align: center;
+        }
+        textarea{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" align="center" width="700px">
+        <tr align="center"> 
+            <td colspan="2" style="font-size: 20px; color:blue; background-color: yellow;">회원가입</td>
+        </tr>
+        <tr>
+            <td class="title_style">ID</td>
+            <td><input type="text" placeholder="Your ID"></td>
+        </tr>
+        <tr>
+            <td class="title_style">Password</td>
+            <td><input type="password" placeholder="Your Password"></td>
+        </tr>
+        <tr>
+            <td class="title_style">Name</td>
+            <td><input type="text" placeholder="Your Name"></td>
+        </tr>
+        <tr>
+            <td class="title_style">Phone</td>
+            <td>
+                <input type="text" placeholder="국번"> -
+                <input type="text" placeholder="앞자리"> -
+                <input type="text" placeholder="뒷자리">
+            </td>
+        </tr>
+        <tr>
+            <td class="title_style">Email</td>
+            <td>
+                <input type="email" placeholder="Mail ID"> @
+                <select>
+                    <option>gmail.com</option>
+                    <option>nate.com</option>
+                    <option>daum.net</option>
+                    <option>naver.com</option>
+                    <option>직접 입력</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="title_style">Skill</td>
+            <td>
+                <input type="checkbox"> Node.js
+                <input type="checkbox"> Oracle
+                <input type="checkbox"> MySQL
+                <input type="checkbox"> JavaScript
+                <input type="checkbox"> CSS
+                <input type="checkbox"> React
+            </td>
+        </tr>
+        <tr>
+            <td class="title_style">email receive</td>
+            <td>
+                <input type="radio" name="mail"> 예
+                <input type="radio" name="mail"> 아니요
+            </td>
+        </tr>
+        <tr>
+            <td class="title_style">Introduction</td>
+            <td>
+                <textarea cols="50" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <button>가입</button>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <!-- 
+        목록을 표현해보자
+        순서있는 목록 : ordered List(ol)
+        순서없는 목록 : unordered List(ul)
+     -->
+    <ol>
+
+    </ol>
+    <h1>더미 텍스트</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo ducimus unde praesentium, sed incidunt laborum quisquam laudantium necessitatibus, quis exercitationem obcaecati atque ratione sapiente aspernatur nobis culpa officia velit dolor?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim possimus ratione inventore rerum, beatae iste nam odit quia, ex voluptates molestias quod perferendis repudiandae delectus a temporibus culpa tempore? Tempora!</p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+</body>
+</html>
